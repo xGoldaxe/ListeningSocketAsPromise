@@ -17,7 +17,7 @@ export default function listeningSocketAsPromise<T>(
 		const eventTimeout = setTimeout(() => {
 			reject("Timeout event");
 			socket.off(eventName, listener);
-		}, timeoutInMillis ? timeoutInMillis : defaultTimeoutInMillis);
+		}, timeoutInMillis !== undefined ? timeoutInMillis : defaultTimeoutInMillis);
 
 		function listener(eventObj: T)  {
 			if (!validator?.(eventObj)) {
