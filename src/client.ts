@@ -1,5 +1,5 @@
 import { io } from "socket.io-client";
-import listeningSocketAsPromise from "./lib/listeningSocketAsPromise";
+import listeningSocketAsPromise from "@goldaxe/listening-socket-as-promise";
 
 const socket = io("http://localhost:3000");
 
